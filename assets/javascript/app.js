@@ -1,26 +1,63 @@
-/*timer count down to end of game
-window.onload = function() {
+$(document).ready(function(){
+  // value for the timer to 60 seconds
+  var number = 60;
+    $("#start-button").click(function(){
+    // start game
+    $("#start-button").on("click", start);  
+    // submits answers and finish game
+    $("#submit").on("click", finish);
+    // restarts games
+    $("#restart").on("click", restart);
 
-};*/
-//set number counter to 100
-var counter = 0;
-var timeleft = 100;
+// functions 
+    function start(){
+    	counter = setInterval(timer, 1000);
+    	showIt(".question");
+    	showIt(".answers");
+    	showIt("#submit");
+	    hideIt("#start-button");
+	    hideIt(".rules");
+	    hideIt("#restart");
+	    hideIt("#results");
+    }
+    function timer(){
+      // decrement the timer by 1
+      number-- 
+      $("#timer").html("<h2>" + number + "</h2>" );
+      if (number === 0){
+        alert("Time Up!")
+    // call stop function
+        stop(); 
+      }
+    }
+    function stop(){
+        // timer stops game
+    	clearInterval(counter); 
+    	$("#results").show();
+    	$("#restart").show();
+		$(".question").hide();
+		$(".answers").hide();
+		$("#submit").hide();
+    }
+    function finish(){
+    	number = 1; // if number is equal to 0 number will show -1 so 1 has to be selected
+        clearInterval(counter);
+        // stops the timer 
+    	timer();
+    }
 
-function convertSeconds(s) {
-    var min = floor(s / 60);
-    var sec = s % 60;
-}
-/*function setup() {
-    noCanvas();
-}*/
+    function restart(){
+    	number = 60;
+    	start();
+    }
 
-var timer = select('#timer');
-timer.html(convertSeconds(timeleft - counter));
-
-function timeIt(){
-    counter++;
-    timer.html(convertSeconds(timeLeft - counter));
-}
-setInterval(timeIt, 1000);
-//var that will store interval ID when game starts
-var intervalId;
+    function hideMe(e) {
+    	$(e).hide();
+    }
+    function showMe(e) {
+    	$(e).show();
+    }
+//start function call
+  	start(); 
+  });
+});
