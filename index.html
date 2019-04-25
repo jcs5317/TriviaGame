@@ -15,67 +15,70 @@
     <h1 class="text-center">Trivia Game!</h1>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12, text-center">
-                <p class="rules">You have 60 seconds to answer all 5 questions.</p>
-                <h2>
-                    <button type="button" id="start-button">Start</button>
-                </h2>
+        <div class="row, text-center">
+            <p class="rules">You have 30 seconds to answer all 5 questions.</p>
+            <h2>
+                <button type="button" id="start-button">Start</button>
+            </h2>
+            <div class="timeRemaining">
                 <h3>Time Remaining:</h3>
-                <div id="timer"><h2>60</h2></div>
-                <p class="question">1. A "Pin" is 4.5 gallons of what?</p>
-                <ul class="answers">
-                    <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">A1</label><br />
-                    <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">A2</label><br />
-                    <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Beer</label><br />
-                    <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">A4</label><br />
-                </ul>
-                <!-- question 2 -->
-                <p class="question">2.What was the ancient Egyptian cure for hemorrhoids?</p>
-                <ul class="answers">
-                    <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">A1</label><br />
-                    <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">A2</label><br />
-                    <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Beer</label><br />
-                    <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">A4</label><br />
-                </ul>
-                <!-- question 3 -->
-                <p class="question">3. A carbonade is a dish that must contain what?</p>
-                <ul class="answers">
-                    <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">A1</label><br />
-                    <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">A2</label><br />
-                    <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Beer</label><br />
-                    <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">A4</label><br />
-                </ul>
-                <!-- question 4 -->
-                <p class="question">4. In Hawaiian it's Pia, in Polish its Piwo and in Hungarian its Sor.  What is it?</p>
-                <ul class="answers">
-                    <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">A1</label><br />
-                    <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">A2</label><br />
-                    <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">Beer</label><br />
-                    <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">A4</label><br />
-                </ul>
-                <!-- question 5 -->
-                <p class="question">5. In 1935 what beverage was was the year  aluminum beer can intruduced?</p>
-                <ul class="answers">
-                    <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">A1</label><br />
-                    <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">A2</label><br />
-                    <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">1935</label><br />
-                    <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">A4</label><br />
-                </ul>
-                <!-- Hidden Buttons and Elements -->
-                <!-- Submit Button -->
-                <button type="button" id="submit">Submit Answers</button>
-                <!-- Results -->
-                <div id="results">
-                    Show Answers!
-                    <!-- <div id="category1">
+                <!--question 1-->
+            </div>
+            <div id="timer">
+                <h2>30</h2>
+            </div>
+            <p class="question">1. A "Pin" is 4.5 gallons of what?</p>
+            <ul class="answers">
+                <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Water</label><br />
+                <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Wine</label><br />
+                <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Beer</label><br />
+                <input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Soda</label><br />
+            </ul>
+            <!-- question 2 -->
+            <p class="question">2.What beverage was used as an ancient Egyptian cure for hemorrhoids?</p>
+            <ul class="answers">
+                <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">Water</label><br />
+                <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Wine</label><br />
+                <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Beer</label><br />
+                <input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Soda</label><br />
+            </ul>
+            <!-- question 3 -->
+            <p class="question">3. A carbonade is a dish that must contain what?</p>
+            <ul class="answers">
+                <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">Water</label><br />
+                <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Wine</label><br />
+                <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Beer</label><br />
+                <input type="radio" name="q3" value="d" id="q3d"><label for="q3d">Soda</label><br />
+            </ul>
+            <!-- question 4 -->
+            <p class="question">4. In Hawaiian it's Pia, in Polish it's Piwo and in Hungarian it's Sor. What is it?</p>
+            <ul class="answers">
+                <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">Water</label><br />
+                <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">Wine</label><br />
+                <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">Beer</label><br />
+                <input type="radio" name="q4" value="d" id="q4d"><label for="q4d">Soda</label><br />
+            </ul>
+            <!-- question 5 -->
+            <p class="question">5. Intoduced in the year 1935, what beverage was made available in an aluminum can?</p>
+            <ul class="answers">
+                <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">Water</label><br />
+                <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">Wine</label><br />
+                <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">Beer</label><br />
+                <input type="radio" name="q5" value="d" id="q5d"><label for="q5d">Soda</label><br />
+            </ul>
+            <!-- Submit Button -->
+            <button type="button" id="submit">Submit</button>
+            <!-- Results -->
+            <div id="results">
+                Answers Right!
+                <!-- <div id="category1">
                         <p><strong>Question 1:</strong> The correct answer is the <strong>Answer 1</strong>.</p>
                         </div> -->
-                </div>
-                <button type="button" id="restart">Try Again?</button>
-
             </div>
+            <button type="button" id="restart">Try Again?</button>
+
         </div>
+    </div>
     </div>
     <footer id="footer" class="site-footer">
         <div class="container">

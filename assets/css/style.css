@@ -1,0 +1,7 @@
+body {
+    background: url("../images/beerback.jpg");
+}
+.container {
+    background: wheat;
+    opacity: 0.8;
+}
